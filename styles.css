@@ -1,0 +1,94 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #1b1b1b;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 100vh; /* Ocupar el 100% de la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px;
+  background: #4c1a1a;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+main {
+  flex: 1; /* Asegura que el contenido principal ocupe el espacio restante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pumpkin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pumpkin {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.pumpkin:hover {
+  transform: scale(1.2);
+}
+
+.pumpkin::before,
+.pumpkin::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  top: 30%;
+}
+
+.pumpkin::before {
+  left: 20%;
+}
+
+.pumpkin::after {
+  right: 20%;
+}
+
+footer {
+  background: #4c1a1a;
+  padding: 10px;
+}
+
+body.dark-mode {
+  background-color: #000;
+  color: #ff6600;
+}
